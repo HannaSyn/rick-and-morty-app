@@ -1,0 +1,45 @@
+*{padding: 0;margin: 0;border: 0;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+
+#root {
+  display: flex;
+}
+
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.list {
+}
+
+.list__item {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+}
+
+.name {
+  color: black;
+}
+
+.status {
+  color: darkslategray;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
