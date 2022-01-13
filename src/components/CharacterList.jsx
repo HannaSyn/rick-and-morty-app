@@ -1,7 +1,7 @@
 import React from 'react';
 import CharacterItem from './CharacterItem';
 
-const CharacterList = ({ chars }) => {
+const CharacterList = ({chars}) => {
 
   return (
     <ul className="list">

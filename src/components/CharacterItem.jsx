@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CharacterItem = ({ char }) => {
+const CharacterItem = ({char}) => {
 
   return (
     <li className="list__item">

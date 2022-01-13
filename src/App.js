@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import { loadChars } from './API/GetCharacters';
 import './styles/App.css';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 import CharacterAutocomplete from './components/CharacterAutocomplete';
 import CharacterList from './components/CharacterList';
-import { loadChars } from './API/GetCharacters';
+import CharacterPagination from './components/CharacterPagination';
 
 
 function App() {
@@ -33,16 +32,7 @@ function App() {
         <h1 className="title">Rick and Morty characters</h1>
         <CharacterAutocomplete/>
         <CharacterList chars={chars}/>
-        <div className="pagination">
-          <Stack spacing={2}>
-            <Pagination 
-              count={pageCount} 
-              variant="outlined"
-              page={page}
-              onChange={changePage}
-            />
-          </Stack>
-        </div>
+        <CharacterPagination page={page} pageCount={pageCount} changePage={changePage}/>
       </div>
     </div>
   );
