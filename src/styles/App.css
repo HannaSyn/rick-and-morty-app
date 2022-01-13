@@ -7,6 +7,7 @@ ul li{list-style: none;}
 
 #root {
   display: flex;
+  flex-direction: column;
 }
 
 .App {
@@ -17,6 +18,7 @@ ul li{list-style: none;}
 
 .title {
   text-align: center;
+  margin: 20px 0;
 }
 
 .list {
@@ -42,4 +44,19 @@ ul li{list-style: none;}
   align-items: center;
   justify-content: center;
   margin: 30px 0;
+}
+
+.navigation {
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation__link {
+  color: black;
+  margin: 0 10px;
 }

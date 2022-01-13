@@ -4,7 +4,7 @@ const CharacterItem = ({char}) => {
 
   return (
     <li className="list__item">
-      <a href="#">
+      <a href="/character">
         <p className="name">Name: {char.name}</p>
         <span className="status">Status: {char.status}</span>
       </a>
