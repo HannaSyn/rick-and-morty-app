@@ -53,10 +53,17 @@ ul li{list-style: none;}
 
 .navigation__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navigation__link {
   color: black;
-  margin: 0 10px;
+}
+
+.fb-button {
+  background-color: #4267b2;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
 }
