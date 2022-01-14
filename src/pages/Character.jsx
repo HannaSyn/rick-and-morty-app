@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
 import { getCharById } from '../API/GetCharacters';
+import CharacterInfo from '../components/CharacterInfo';
 
 const Character = () => {
   const [character, setCharacter] = useState({});
@@ -11,23 +12,16 @@ const Character = () => {
   useEffect(() => {
     getCharById(characterId)
     .then((response) => {
-      console.log(response.data.data.character.location);
+      console.log(response.data.data.character);
       setCharacter(response.data.data.character);  
     })
     .catch((error) => console.log(error))
 
-  }, [])
+  }, [characterId])
 
   return (
     <div className="container">
-      <div>
-        <h1>{character.name}</h1>
-        <p>{character.species}</p>
-        <p>{character.gender}</p>
-        <p>{character.status}</p>
-        <p>{character.location ? character.location.name : ''}</p>
-        <p>{character.created}</p>
-      </div>
+      <CharacterInfo character={character}/>
     </div>
   );
 };

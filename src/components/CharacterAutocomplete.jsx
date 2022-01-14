@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import { getFilteredChars } from '../API/GetCharacters';
+import {getFilteredChars} from '../API/GetCharacters';
+import {useNavigate} from 'react-router-dom';
 
 const CharacterAutocomplete = () => {
   const [inputValue, setInputValue] = useState('');
   const [filteredChars, setFilteredChars] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
       getFilteredChars(inputValue)
@@ -22,6 +24,7 @@ const CharacterAutocomplete = () => {
   }
 
   const openDetails = (e, value) => {
+    navigate('/character', {replace: true, state:{charId: value.id}});
     console.log(value);
   }
 

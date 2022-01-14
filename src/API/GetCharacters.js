@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const url = 'https://rickandmortyapi.com/graphql'
+
 export const loadChars = async (page) => {
-  const response = await axios.post(`https://rickandmortyapi.com/graphql`, 
+  const response = await axios.post(url, 
     {
       query: `{
         characters(page: ${page}) {
@@ -24,7 +26,7 @@ export const loadChars = async (page) => {
 }
 
 export const getFilteredChars = async (inputValue) => {
-  const response = await axios.post(`https://rickandmortyapi.com/graphql`, 
+  const response = await axios.post(url, 
     {
       query: `{
         characters(filter: { name: "${inputValue}" }) {
@@ -43,7 +45,7 @@ export const getFilteredChars = async (inputValue) => {
 }
 
 export const getCharById = async (id) => {
-  const response = await axios.post(`https://rickandmortyapi.com/graphql`, 
+  const response = await axios.post(url, 
     {
       query: `{
         character(id: ${id}) {
