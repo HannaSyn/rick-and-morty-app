@@ -1,27 +1,20 @@
 import React from 'react';
 import './styles/App.css';
-import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
+import Character from './pages/Character';
 import Favorite from './pages/Favorite';
-
+import Navigation from './components/Navigation';
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <nav className="navigation">
-        <ul className="navigation__list">
-          <li>
-            <Link to="/home" className="navigation__link">Home</Link>
-          </li>
-          <li>
-            <Link to="/favorite" className="navigation__link">Favorite</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navigation/>
       <Routes>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="/character" element={<Character />}/>
         <Route path="/favorite" element={<Favorite />}/>
       </Routes>
     </BrowserRouter>

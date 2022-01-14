@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import { getFilteredChars } from '../API/GetCharacters'
+import { getFilteredChars } from '../API/GetCharacters';
 
 const CharacterAutocomplete = () => {
   const [inputValue, setInputValue] = useState('');

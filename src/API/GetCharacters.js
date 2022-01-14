@@ -41,3 +41,29 @@ export const getFilteredChars = async (inputValue) => {
 
   return response;
 }
+
+export const getCharById = async (id) => {
+  const response = await axios.post(`https://rickandmortyapi.com/graphql`, 
+    {
+      query: `{
+        character(id: ${id}) {
+          name
+          species
+          gender
+          status
+          created,
+          location {
+            name
+          },
+          episode {
+            name
+          },
+        }
+      } `,
+      variables: {}
+    }, {
+      headers: {"Content-Type": "application/json"},
+    },)
+
+  return response;
+}

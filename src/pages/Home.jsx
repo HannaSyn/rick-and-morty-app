@@ -26,7 +26,7 @@ function Home() {
   };
 
   return (
-      <div className="App">
+      <div className="container">
         <CharacterAutocomplete/>
         <h1 className="title">Rick and Morty characters</h1>
         <CharacterList chars={chars}/>
