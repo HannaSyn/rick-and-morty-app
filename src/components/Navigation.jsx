@@ -19,9 +19,6 @@ const Navigation = () => {
             <Link to="/" className="navigation__link">Home</Link>
           </li>
           <li>
-            <Link to="/favorite" className="navigation__link">Favorite</Link>
-          </li>
-          <li>
             {
               authName 
               ?

@@ -11,10 +11,8 @@ const CharacterInfo = ({character}) => {
   const loadcharPhoto = () => {
     getCharPhoto(character.id)
     .then((response) => {
-      console.log(response);
       setCharPhoto(response.data.data.character.image);
     })
-    .catch((error) => console.log(error))
   }
 
   return (
