@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import AuthFacebook from './AuthFacebook';
 
 const Navigation = () => {
-
   const [authName, setAuthName] = useState('');
 
   const getAuthName = (name) => {

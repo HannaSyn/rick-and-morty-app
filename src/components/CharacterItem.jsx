@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-
 const CharacterItem = ({char}) => {
+  
   return (
     <li className="list__item">
       <Link 

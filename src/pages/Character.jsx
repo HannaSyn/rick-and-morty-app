@@ -9,7 +9,6 @@ const Character = () => {
   const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [errorChars, setErrorChars] = useState('');
-
   const location = useLocation();
   const characterId = location.state.charId;
 

@@ -3,17 +3,16 @@ import {getCharPhoto} from '../API/GetCharacters';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 
-
 const CharacterInfo = ({character}) => {
-  const date = new Date(character.created).toDateString();
   const [charPhoto, setCharPhoto] = useState('');
+  const date = new Date(character.created).toDateString();
 
   const loadcharPhoto = () => {
     getCharPhoto(character.id)
     .then((response) => {
       setCharPhoto(response.data.data.character.image);
     })
-  }
+  };
 
   return (
     <div className="card">

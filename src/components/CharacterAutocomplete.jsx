@@ -17,16 +17,16 @@ const CharacterAutocomplete = () => {
       })
       .catch((error) => console.log(error))
   
-  }, [inputValue])
+  }, [inputValue]);
 
   const handleInputChange = (e, value) => {
     setInputValue(value)
-  }
+  };
 
   const openDetails = (e, value) => {
     navigate('/character', {replace: true, state:{charId: value.id}});
     console.log(value);
-  }
+  };
 
   return (
     <Autocomplete

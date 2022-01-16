@@ -3,6 +3,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
 const CharacterPagination = ({page, pageCount, changePage}) => {
+  
   return (
     <div className="pagination">
       <Stack spacing={2}>
