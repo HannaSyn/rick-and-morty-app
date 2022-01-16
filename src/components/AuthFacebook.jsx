@@ -3,7 +3,6 @@ import FacebookLogin from 'react-facebook-login';
 
 const AuthFacebook = ({getAuthName}) => {
   const responseFacebook = (response) => {
-    console.log(response);
     getAuthName(response.name);
   };
 

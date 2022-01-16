@@ -7,7 +7,6 @@ const Navigation = () => {
 
   const getAuthName = (name) => {
     setAuthName(name);
-    console.log(name);
   };
 
   return (

@@ -12,11 +12,9 @@ const CharacterAutocomplete = () => {
   useEffect(() => {
       getFilteredChars(inputValue)
       .then((response) => {
-        console.log('filtered' + response);
         setFilteredChars(response.data.data.characters.results);  
       })
-      .catch((error) => console.log(error))
-  
+      .catch(() => {})
   }, [inputValue]);
 
   const handleInputChange = (e, value) => {
@@ -25,7 +23,6 @@ const CharacterAutocomplete = () => {
 
   const openDetails = (e, value) => {
     navigate('/character', {replace: true, state:{charId: value.id}});
-    console.log(value);
   };
 
   return (
