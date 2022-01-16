@@ -26,12 +26,14 @@ function Home() {
   };
 
   return (
+    <div className="main">
       <div className="container">
         <CharacterAutocomplete/>
         <h1 className="title">Rick and Morty characters</h1>
         <CharacterList chars={chars}/>
         <CharacterPagination page={page} pageCount={pageCount} changePage={changePage}/>
       </div>
+    </div>
   );
 }
 

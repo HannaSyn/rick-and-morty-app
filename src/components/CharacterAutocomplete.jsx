@@ -30,6 +30,7 @@ const CharacterAutocomplete = () => {
 
   return (
     <Autocomplete
+      className="autocomplete"
       disablePortal
       id="autocomplete"
       options={filteredChars}

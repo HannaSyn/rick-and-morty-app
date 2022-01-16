@@ -1,13 +1,36 @@
-*{padding: 0;margin: 0;border: 0;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li{ 
+  list-style: none;
+}
 
 #root {
   display: flex;
   flex-direction: column;
+  font-family: "Goldman", cursive;
+}
+
+.main {
+  background: url(../assets/images/bg.png) 50% 50%/contain no-repeat;
 }
 
 .container {
@@ -27,16 +50,17 @@ ul li{list-style: none;}
 .list__item {
   margin: 15px 0;
   padding: 10px;
-  border: 1px solid steelblue;
+  border: 1px solid #62a4ab;
   border-radius: 5px;
+  background-color: #fffffff0;
 }
 
 .name {
-  color: black;
+  color: #2F4368;
 }
 
 .status {
-  color: darkslategray;
+  color: #87501F;
 }
 
 .pagination {
@@ -46,24 +70,79 @@ ul li{list-style: none;}
   margin: 30px 0;
 }
 
+.pagination button {
+  font-family: "Goldman", cursive;
+}
+
 .navigation {
   padding: 20px;
-  background-color: lightgreen;
+  background-color: #62a4ab;
 }
 
 .navigation__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 .navigation__link {
-  color: black;
+  color: #EAEAEA;
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Goldman", cursive;
+  color: #EAEAEA;
+}
+
+.add-photo {
+  background-color: #62a4ab;
+  margin-bottom: 20px;
 }
 
 .fb-button {
   background-color: #4267b2;
-  padding: 10px;
-  color: #ffffff;
-  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.accordeon {
+  max-width: 500px;
+}
+
+.accordeon p {
+  font-family: "Goldman", cursive;
+}
+
+.MuiAutocomplete-popper li {
+  font-family: "Goldman", cursive;
+}
+
+.autocomplete label {
+  font-family: "Goldman", cursive;
+}
+
+.autocomplete legend {
+  width: 120px;
+}
+
+@media(max-width: 880px) {
+  .container {
+    margin: 20px;
+    width: auto;
+  }
+  .main {
+    background-size: cover;
+  }
+  .accordeon {
+    max-width: 300px;
+  }
 }

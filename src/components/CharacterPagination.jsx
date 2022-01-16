@@ -11,6 +11,8 @@ const CharacterPagination = ({page, pageCount, changePage}) => {
           variant="outlined"
           page={page}
           onChange={changePage}
+          hidePrevButton
+          hideNextButton
         />
       </Stack>
     </div>

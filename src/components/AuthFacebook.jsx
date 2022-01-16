@@ -14,7 +14,7 @@ const AuthFacebook = ({getAuthName}) => {
         autoLoad={false}
         fields="name"
         callback={responseFacebook} 
-        cssClass="fb-button"
+        cssClass="fb-button btn"
       />
     </>
   );
