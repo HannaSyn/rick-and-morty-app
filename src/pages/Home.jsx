@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { loadChars } from '../API/GetCharacters';
+import {loadChars} from '../API/GetCharacters';
 import CharacterAutocomplete from '../components/CharacterAutocomplete';
 import CharacterList from '../components/CharacterList';
 import CharacterPagination from '../components/CharacterPagination';

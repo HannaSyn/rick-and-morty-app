@@ -11,8 +11,8 @@ export const loadChars = async (page) => {
             pages
           }
           results {
-            id,
-            name,
+            id
+            name
             status
           }
         }
@@ -31,7 +31,7 @@ export const getFilteredChars = async (inputValue) => {
       query: `{
         characters(filter: { name: "${inputValue}" }) {
           results {
-            id,
+            id
             name
           }
         }
@@ -49,11 +49,12 @@ export const getCharById = async (id) => {
     {
       query: `{
         character(id: ${id}) {
+          id
           name
           species
           gender
           status
-          created,
+          created
           location {
             name
           },
@@ -62,6 +63,22 @@ export const getCharById = async (id) => {
           },
         }
       } `,
+      variables: {}
+    }, {
+      headers: {"Content-Type": "application/json"},
+    },)
+
+  return response;
+}
+
+export const getCharPhoto = async (id) => {
+  const response = await axios.post(url, 
+    {
+      query: `{
+        character(id: ${id}) {
+          image
+        }
+      }`,
       variables: {}
     }, {
       headers: {"Content-Type": "application/json"},
